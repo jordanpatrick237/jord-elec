@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="logo-jord-elec.png">
 <title>Jord-Elec | Génie électrique bâtiment et industriel</title>
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--tx:#0f1e3d;--mu:#55627c;--blue:#1740a6;--sky:#2f8fd8;--green:#1e8a3c;--yel:#f2c200;--hero:#08163c;--wa:#25d366;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1430;--card:#122147;--tx:#eef2fb;--mu:#a9b6d3;--blue:#7aa6ff;--hero:#050d26}}
 :root[data-theme="dark"]{--bg:#0a1430;--card:#122147;--tx:#eef2fb;--mu:#a9b6d3;--blue:#7aa6ff;--hero:#050d26}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:calc(68px + env(safe-area-inset-top,0px))}
+nav .l a.on:not(.cta){color:var(--yel)}
 body{background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 a{color:inherit;text-decoration:none}
 .w{max-width:1050px;margin:auto;padding:0 20px}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(8,22,60,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
 nav .w{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}.logo b{color:var(--yel)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:.5px}.logo img{height:44px;width:auto;display:block}.logo b{color:var(--yel)}
 nav .l{display:flex;gap:18px;font-size:.9rem}
 @media(max-width:640px){nav .l a:not(.cta){display:none}}
 .cta{background:var(--yel);color:#111;padding:8px 16px;border-radius:99px;font-weight:700}
@@ -90,19 +92,27 @@ ul{list-style:none;padding:0}li{padding:6px 0}li:before{content:"✓ ";color:var
 .soc a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid rgba(128,128,128,.35);color:var(--tx);transition:.2s}
 .soc a:hover{background:var(--yel);color:#111;transform:translateY(-2px)}
 .soc svg{width:22px;height:22px;fill:currentColor}
+.rv{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rt{display:flex;width:max-content;animation:rv 45s linear infinite}.rv:hover .rt,.rv:focus-within .rt{animation-play-state:paused}
+@keyframes rv{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.rt figure{position:relative;flex:none;width:min(68vw,270px);aspect-ratio:3/4;margin:0 16px 0 0;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(8,22,60,.18);background:var(--hero)}
+.rt img{width:100%;height:100%;object-fit:cover;display:block}
+.rt figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;color:#fff;font-weight:600;font-size:.92rem;background:linear-gradient(transparent,rgba(8,22,60,.88))}
+@media(prefers-reduced-motion:reduce){.rv{overflow-x:auto}.rt{animation:none}}
+#realisations{background:var(--card)}
 footer{text-align:center;padding:22px;font-size:.85rem;color:var(--mu)}
 </style>
 </head>
 <body>
-<nav><div class="w"><a href="#top" class="logo">JORD<b>-</b>ELEC</a>
+<nav><div class="w"><a href="#top" class="logo"><img src="logo-jord-elec.png" alt="Jord-Elec SARL" width="52" height="44"><span>JORD<b>-</b>ELEC</span></a>
 <button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
-<div class="l" id="mn"><a href="#services">Services</a><a href="#solaire">Solaire</a><a href="#maintenance">Maintenance</a><a href="#flyers">Nos offres</a><a class="cta" href="#contact">Contact</a></div></div></nav>
+<div class="l" id="mn"><a href="#services">Services</a><a href="#solaire">Solaire</a><a href="#flyers">Nos offres</a><a href="#realisations">Nos réalisations</a><a href="#maintenance">Maintenance</a><a class="cta" href="#contact">Contact</a></div></div></nav>
 
 <header class="hero" id="top"><div class="w">
 <small>GÉNIE ÉLECTRIQUE BÂTIMENT ET INDUSTRIEL</small>
 <h1>Des solutions électriques <span>intelligentes</span> pour un avenir durable</h1>
 <p>Au-delà du possible, nous franchissons l'impossible pour vous satisfaire. Étude, conception, exécution et suivi de vos installations électriques et solaires.</p>
-<div class="btns"><a class="btn b1" href="#souscription">Demander un devis</a><a class="btn b2" href="#services">Nos services</a></div>
+<div class="btns"><a class="btn b1" href="souscription.html">Demander un devis</a><a class="btn b2" href="#services">Nos services</a></div>
 <div class="stats"><div><b>24h/24 · 7j/7</b>Maintenance sans interruption</div><div><b>BT / HT</b>Réseaux électriques</div><div><b>Qualité</b>Sécurité · Performance</div></div>
 </div></header>
 
@@ -142,28 +152,22 @@ footer{text-align:center;padding:22px;font-size:.85rem;color:var(--mu)}
 <figure class="fig"><a href="flyer-solaire-jord-elec-sarl.jpg" target="_blank" rel="noopener"><img src="flyer-solaire-jord-elec-sarl.jpg" alt="Flyer Jord-Elec SARL : bientôt, ouverture de notre département spécialisé dans le solaire" loading="lazy"></a><figcaption>Jord-Elec SARL — Département solaire</figcaption></figure>
 </div></div></section>
 
+<section id="realisations"><div class="w"><h2>Nos réalisations</h2><p class="sub">Installations solaires, éclairage et travaux de bâtiment : quelques-uns de nos projets.</p></div>
+<div class="rv"><div class="rt" id="rt">
+<figure><img src="realisation-solaire.jpg" alt="Installation solaire hybride" loading="lazy"><figcaption>Installation solaire hybride</figcaption></figure>
+<figure><img src="realisation-faux-plafond-led.jpg" alt="Faux plafond et éclairage LED" loading="lazy"><figcaption>Faux plafond et éclairage LED</figcaption></figure>
+<figure><img src="realisation-couloir.jpg" alt="Éclairage et installation de bâtiment" loading="lazy"><figcaption>Éclairage et installation de bâtiment</figcaption></figure>
+<figure><img src="realisation-luminaire-cristal.jpg" alt="Luminaires cristal et LED" loading="lazy"><figcaption>Luminaires cristal et LED</figcaption></figure>
+<figure><img src="realisation-luminaires.jpg" alt="Luminaires décoratifs" loading="lazy"><figcaption>Luminaires décoratifs</figcaption></figure>
+</div></div></section>
+
 <section id="maintenance"><div class="w">
 <h2>Contrat de maintenance</h2><p class="sub">Préventive et corrective, 24h/24 – 7j/7, sans interruption.</p>
 <div class="plan">
 <div><ul><li>Prévention des pannes et des interruptions</li><li>Interventions rapides et efficaces</li><li>Disponibilité totale, jour et nuit</li><li>Optimisation de la durée de vie de vos équipements</li><li>Performance et tranquillité garanties</li></ul>
 <p class="sub" style="margin-top:14px">Pour bâtiments résidentiels et industriels, installations solaires, automatismes et systèmes électriques.</p></div>
-<div class="price"><span>Votre investissement</span><br><b>25 000</b> FCFA / mois<p class="sub" style="margin:8px 0 18px">Un petit investissement pour une grande sérénité.</p><a class="btn b1" href="#souscription">Souscrire maintenant</a></div>
+<div class="price"><span>Votre investissement</span><br><b>25 000</b> FCFA / mois<p class="sub" style="margin:8px 0 18px">Un petit investissement pour une grande sérénité.</p><a class="btn b1" href="souscription.html">Souscrire maintenant</a></div>
 </div></div></section>
-
-<section id="souscription"><div class="w">
-<h2>Formulaire de souscription</h2><p class="sub">Remplissez le formulaire : votre demande nous parvient directement sur WhatsApp.</p>
-<form class="fm" id="f">
-<label for="n">Nom complet</label><input id="n" required>
-<label for="t">Téléphone</label><input id="t" type="tel" required>
-<label for="s">Service souhaité</label>
-<select id="s"><option>Contrat de maintenance (25 000 FCFA/mois)</option><option>Électricité bâtiment / industrielle</option><option>Automatisme industriel</option><option>Énergie solaire</option><option>Dépannage industriel</option><option>Domotique</option></select>
-<label for="i">Type d'installation</label>
-<select id="i"><option>Bâtiment résidentiel</option><option>Bâtiment industriel</option><option>Installation solaire</option><option>Automatismes et systèmes électriques</option></select>
-<label for="l">Localisation</label><input id="l" placeholder="Ville, quartier">
-<label for="m">Votre besoin</label><textarea id="m"></textarea>
-<button type="submit">Envoyer ma demande sur WhatsApp</button>
-<p class="msg" id="st" role="status" hidden></p>
-</form></div></section>
 
 <section class="ct" id="contact"><div class="w">
 <h2>Contactez-nous</h2><p style="opacity:.9;margin-bottom:26px">Étude &amp; dimensionnement · Conception sur mesure · Exécution professionnelle · Suivi &amp; accompagnement</p>
@@ -207,23 +211,12 @@ document.getElementById('y').textContent=new Date().getFullYear();
 document.getElementById('loc').textContent=CONFIG.localisation;
 if(CONFIG.email){var m=document.getElementById('mail');m.textContent=CONFIG.email;m.href='mailto:'+CONFIG.email;document.getElementById('rowMail').hidden=false}
 document.querySelectorAll('.soc a').forEach(function(a){var u=CONFIG.reseaux[a.dataset.s];if(u){a.href=u}else{a.remove()}});
+var rt=document.getElementById('rt');if(rt){Array.prototype.slice.call(rt.children).forEach(function(n){var c=n.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelector('img').alt='';rt.appendChild(c)})}
+var ln=[].slice.call(document.querySelectorAll('#mn a[href^="#"]:not(.cta)'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ln.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});ln.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
 var bg=document.getElementById('bg'),mn=document.getElementById('mn');
 bg.addEventListener('click',function(){var o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'});
 mn.addEventListener('click',function(e){if(e.target.tagName==='A'){mn.classList.remove('open');bg.textContent='☰'}});
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
- var f=this,b=f.querySelector('button'),st=document.getElementById('st'),lbl=b.textContent;
- var v=function(i){return document.getElementById(i).value.trim()};
- var t='Bonjour Jord-Elec, je souhaite un devis / souscrire.\n\n*Nom :* '+v('n')+'\n*Téléphone :* '+v('t')+'\n*Service :* '+v('s')+'\n*Installation :* '+v('i')+'\n*Localisation :* '+(v('l')||'-')+'\n*Besoin :* '+(v('m')||'-');
- var url='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(t);
- var show=function(m,err){st.textContent=m;st.className='msg'+(err?' err':'');st.hidden=false};
- b.disabled=true;b.textContent='Envoi en cours…';
- /* 1) envoi automatique côté serveur (send.php) ; 2) sinon WhatsApp s'ouvre avec le message prêt */
- fetch('send.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:t})})
- .then(function(r){return r.json()})
- .then(function(d){if(!d.ok)throw 0;show('✓ Demande envoyée. Nous vous répondons très vite sur WhatsApp.');f.reset()})
- .catch(function(){show('Ouverture de WhatsApp… appuyez sur « Envoyer » pour valider votre demande.');location.href=url})
- .then(function(){b.disabled=false;b.textContent=lbl});
-});
 </script>
 </body>
 </html>
